@@ -1,0 +1,35 @@
+font_family    Hack Nerd Font Mono  
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
+font_size 11.0
+
+disable_ligatures never
+
+cursor_shape underline
+# url_color #0087bd
+url_style curly
+open_url_with default
+
+
+underline_hyperlinks hover
+show_hyperlink_targets yes 
+
+copy_on_select yes
+
+background_opacity 0.5
+
+hide_window_decorations yes
+window_border_width 0.5pt
+# active_border_color #ffffff
+
+modify_font underline_position 2
+modify_font underline_thickness 150%
+
+
+
+# BEGIN_KITTY_THEME
+# Cyberpunk
+include current-theme.conf
+# END_KITTY_THEME
