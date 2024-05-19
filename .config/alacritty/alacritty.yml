@@ -1,0 +1,149 @@
+# Window Customization
+window:
+  opacity: 0.9
+  decoration: none
+  padding:
+    x: 0
+    y: 0
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+# window.dynamic_title: true
+
+# Font Customization
+font:
+  normal:
+    family: Hack Nerd Font Mono
+    style: Regular
+  bold:
+    family: Hack Nerd Font Mono
+    style: Bold
+  italic:
+    family: Hack Nerd Font Mono
+    style: Italic
+  size: 7
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
+  debug:
+    persistent_logging: false
+draw_bold_text_with_bright_colors: true
+
+colors:
+  # Default colors
+  primary:
+    background: "0x122637"
+    foreground: "0xffffff"
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    # text: '0x122637'
+    # cursor: '0xf0cb09'
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+
+  # Normal colors
+  normal:
+    black: "0x000000"
+    red: "0xff0000"
+    green: "0x37dd21"
+    yellow: "0xfee409"
+    blue: "0x1460d2"
+    magenta: "0xff005d"
+    cyan: "0x00bbbb"
+    white: "0xbbbbbb"
+
+  # Bright colors
+  bright:
+    black: "0x545454"
+    red: "0xf40d17"
+    green: "0x3bcf1d"
+    yellow: "0xecc809"
+    blue: "0x5555ff"
+    magenta: "0xff55ff"
+    cyan: "0x6ae3f9"
+    white: "0xffffff"
+
+cursor:
+  style:
+    shape: Underline
+    blinking: off
+    blink-interval: 750
+    unfocused_hollow: true
+
+key_bindings:
+  - { key: N, mods: Control, action: SpawnNewInstance }
+# Bell
+#
+# The bell is rung every time the BEL control character is received.
+#bell:
+# Visual Bell Animation
+#
+# Animation effect for flashing the screen when the visual bell is rung.
+#
+# Values for `animation`:
+#   - Ease
+#   - EaseOut
+#   - EaseOutSine
+#   - EaseOutQuad
+#   - EaseOutCubic
+#   - EaseOutQuart
+#   - EaseOutQuint
+#   - EaseOutExpo
+#   - EaseOutCirc
+#   - Linear
+#animation: EaseOutExpo
+
+# Duration of the visual bell flash in milliseconds. A `duration` of `0` will
+# disable the visual bell animation.
+#duration: 0
+
+# Visual bell animation color.
+#color: '#ffffff'
+
+# Bell Command
+#
+# This program is executed whenever the bell is rung.
+#
+# When set to `command: None`, no command will be executed.
+#
+# Example:
+#   command:
+#     program: notify-send
+#     args: ["Hello, World!"]
+#
+#command: None
+
+# Hints
+#
+# Terminal hints can be used to find text or hyperlink in the visible part of
+# the terminal and pipe it to other applications.
+#hints:
+# Keys used for the hint labels.
+#alphabet: "jfkdls;ahgurieowpq"
+
+# List with all available hints
+#
+# Each hint must have any of `regex` or `hyperlinks` field and either an
+# `action` or a `command` field. The fields `mouse`, `binding` and
+# `post_processing` are optional.
+#
+# The `hyperlinks` option will cause OSC 8 escape sequence hyperlinks to be
+# highlighted.
+#
+# The fields `command`, `binding.key`, `binding.mods`, `binding.mode` and
+# `mouse.mods` accept the same values as they do in the `key_bindings` section.
+# If the `post_processing` field is set to `true`, heuristics will be used to
+# shorten the match if there are characters likely not to be part of the hint
+# (e.g. a trailing `.`). This is most useful for URIs and applies only to
+# `regex` matches.
+#
