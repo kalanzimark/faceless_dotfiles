@@ -2,6 +2,7 @@ local keymap = vim.keymap --keymap variable
 
 --save file
 keymap.set("n", "<C-s>", ":write<CR>")
+keymap.set("i", "<C-s>", ":write<CR>")
 
 keymap.set("n", "x", '"_x') --stop x from copying text
 keymap.set("i", "jk", "<ESC>") --use jk to escape
