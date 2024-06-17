@@ -82,10 +82,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+v split h
+bindsym $mod+c split h
 
 # split in vertical orientation
-bindsym $mod+c split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -153,12 +153,11 @@ assign [class="slack"] $ws5
 assign [class="vlc"] $ws6
 
 # reload the configuration file
-#
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -221,9 +220,9 @@ bar {
 
 }
 
-# Sreen brightness controls, have to install light to work
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+#install xbacklight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
 #i3lock 
 #install maim and i3lock-fancy 
@@ -231,7 +230,7 @@ bindsym $mod+x exec i3lock-fancy -- maim -z
 
 #wallpapers
 #install feh
-exec_always feh --randomize --bg-scale /home/faceless/Pictures/wallpaper/*
+exec_always feh --randomize --bg-scale /home/faceless/Pictures/wallpapers/*
 
 #enable touchpad tapping
 exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
@@ -246,7 +245,7 @@ bindsym $mod+Shift+s exec flameshot gui
 gaps inner 8px
 
 #picom transparancy
+exec --no-startup-id picom
 exec picom --experimental-backends 
-
 #install arander for multiple monitors
 
